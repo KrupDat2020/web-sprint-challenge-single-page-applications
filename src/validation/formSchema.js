@@ -11,5 +11,5 @@ export default yup.object().shape({
  topping: yup.string().oneOf(["pepperoni", "sausage", "mushroom", "peppers"]),
  special: yup
   .string()
-  .special("please put any special needs here")
+  .required("please put any special needs here")
 });

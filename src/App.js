@@ -93,9 +93,6 @@ return (
     {pizzas.map((pizza) => {
       return <Pizza key= {pizza.id} details= {pizza} />
       })}
-
   </div>
 );
-
-
 }
