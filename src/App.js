@@ -78,11 +78,24 @@ const inputChange = (name, value) => {
   };
 };
 return (
-  <>
+  <div className="container">
     <h1>Lambda Eats</h1>
     <p>You can remove this code and create your own header</p>
-  </>
+
+    <PizzaForm
+    values= {formValues}
+    change= {inputChange}
+    submit= {formSubmit}
+    disabled= {disabled}
+    errors= {formErrors}
+    />
+
+    {pizzas.map((pizza) => {
+      return <Pizza key= {pizza.id} details= {pizza} />
+      })}
+
+  </div>
 );
 
 
-};
+}
