@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PizzaForm from './PizzaForm';
 import axios from 'axios';
-import yup from 'yup';
+import * as yup from 'yup';
 import schema from './validation/formSchema';
 
 
@@ -64,6 +64,18 @@ const inputChange = (name, value) => {
       [name]: value,
     });
   });
+
+  const formSubmit = () => {
+    const newPizza = {
+      username: formValues.username.trim(),
+      size: formValues.size.trim(),
+      special: formValues.special.trim(),
+      pepperoni: formValues.pepperoni.trim(),
+      sausage: formValues.sausage.trim(),
+      mushroom: formValues.mushroom.trim(),
+      peppers: formValues.peppers.trim(),
+    };
+  };
 };
 return (
   <>
