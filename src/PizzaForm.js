@@ -44,13 +44,13 @@ export default function PizzaForm(props) {
 
                 <label>
                    Size:
-                 <input
-                  value={values.size}
-                  onChange={onChange}
-                 name="size"
-                 type="text"
-                 placeholder="please enter size requested"
-                 />
+                   <select onChange={onChange} value={values.size} name="size">
+                       <option value="">--Select an Option--</option>
+                       <option value="small">Small</option>
+                       <option value="medium">Medium</option>
+                       <option value="large">Large</option>
+                       <option value="xlarge">Extra Large</option>
+                   </select>
                 </label>
 
                 <label>
